@@ -1,0 +1,58 @@
+
+
+<body class="cont" style="background-color: darkslategrey;">
+<div class="card text-white bg-danger mb-3" style="max-width: 18rem; margin-left: 32%;">
+  <div class="card-header">Edit</div>
+  <div class="card-body">
+    
+
+
+ 
+<form method="post" action="/employees/<%= @employee.id %>/update">
+
+<label for="name">Name</label><br>
+<input type="text" name="name" value="<%= @employee.name %>"><br>
+
+<label for="phone">Phone</label><br>
+<input type="text" name="phone" value="<%= @employee.phone %>"><br>
+
+<label for="inputState">Brand</label>
+  <select id="inputState" class="form-control" name="brand_id">
+    <% @brands.each do |brand| %>      
+      <option value="<%= brand.id %>"><%= brand.name %></option>
+    <% end %>
+  </select> 
+
+
+
+
+  <label for="inputState">Type</label>
+  <select id="inputState" class="form-control" name="type_id">
+    <% @types.each do |type| %>      
+      <option value="<%= type.id %>"><%= type.name %></option>
+    <% end %>
+  </select>
+
+
+
+<label for="inputState">Quantity</label>
+<select id="inputState" class="form-control" name="quantity_id">
+  <% @quantities.each do |quantity| %>      
+    <option value="<%= quantity.id %>"><%= quantity.name %></option>
+  <% end %>
+</select>
+<br>
+
+
+
+<input type="submit" value="Submit" />
+
+</form>
+
+  
+  </div>
+</div>
+
+
+
+</body>

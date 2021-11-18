@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Party</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+    <link rel="javascript" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js">
+
+
+
+  </head>
+
+  <body>
+
+ 
+
+
+<nav class="navbar fixed-top navbar-dark bg-dark">
+<div class="container">
+
+ 
+
+
+  <ul class="navbar-nav ">
+
+<div class="row  " >
+    <li class="nav-item" style="margin-right:10px" >
+     
+    <%= link_to 'Home  ',employees_index_path, class:'nav-link' %>
+  </li> 
+
+
+  <li class="nav-item " style="margin-right:10px">
+     
+  <%= link_to 'Brand',brands_index_path, class:'nav-link' %>
+</li> 
+
+
+
+<li class="nav-item " >
+     
+<%= link_to 'Types',types_index_path, class:'nav-link' %>
+</li> 
+</div>
+
+  
+  </ul>
+</div>
+</nav>
+
+
+  
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    <%= yield %>
+
+
+
+
+</nav>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

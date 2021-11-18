@@ -1,0 +1,11 @@
+<h1> Editing Brand <%= @brand.name %> </h1>
+ 
+<form method="post" action="/brands/<%= @brand.id %>/update">
+
+  <label for="name">Name</label><br>
+  <input type="text" name="name" value="<%= @brand.name %>"><br>
+
+
+  <input type="submit" value="Submit" />
+  
+</form>

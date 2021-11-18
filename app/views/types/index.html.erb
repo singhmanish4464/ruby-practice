@@ -1,0 +1,30 @@
+
+
+<body style="background-color: lavender;">
+<h1 style=" margin-left: 40%;">Type</h1>
+
+<table class="table table-primary table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+    
+     
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @types.each do |type| %>
+      <tr>
+      <td><%= type.name %> </td>
+      
+    
+     
+      <td><a href="/types/<%= type.id %>/destroy">Delete</a></td>
+      </tr>
+    <% end %> 
+  </tbody>
+</table>
+ 
+
+<a href="/types/form" class="btn btn-outline-danger" role="button" aria-pressed="true">Add Type</a>
+</body>

@@ -1,0 +1,39 @@
+
+<body style="background-color: aquamarine;">
+
+
+<h1   style=" margin-left: 35%;">Employees</h1>
+
+<table class="table table-info table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone-No</th>
+      <th>Brand</th>
+      <th>Type</th>
+
+      <th>Quantity</th>
+
+     
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+      <td><%= employee.name %> </td>
+      <td><%= employee.phone %> </td>
+      <td><%= employee.brand.name unless employee.brand.blank? %> </td>
+      <td><%= employee.type.name unless employee.type.blank?  %> </td>
+      <td><%= employee.quantity.name unless employee.quantity.blank?   %> </td>
+    
+      <td><a href="/employees/<%= employee.id %>/edit">Edit</a></td>
+      <td><a href="/employees/<%= employee.id %>/destroy">Delete</a></td>
+      </tr>
+    <% end %> 
+  </tbody>
+</table>
+ 
+
+<a href="/employees/form" class="btn btn-outline-danger" role="button" aria-pressed="true">Add Yourself</a>
+<body>

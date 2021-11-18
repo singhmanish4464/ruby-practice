@@ -1,0 +1,67 @@
+
+
+
+</style>
+<body class="cont d-flex justify-content-center" style="background-color: darkslategrey;">
+
+<div class="card text-dark bg-info mb-3 " style="max-width: 25rem;  margin-top:100px ">
+  <div class="card-header">Employees</div>
+  <div class="card-body">
+
+  <div class="container" >
+
+<form method="post" action="/employees/create">
+
+  <label for="name" class="form-label">Name :</label><br>
+  <input type="text" class="form-control" name="name"><br>
+
+  <label for="phone" class="form-label">Phone-No :</label><br>
+  <input type="number" class="form-control" name="phone"><br>
+
+
+  
+    <label for="inputState">Brand</label>
+    <select id="inputState" class="form-control" name="brand_id">
+      <% @brands.each do |brand| %>      
+        <option value="<%= brand.id %>"><%= brand.name %></option>
+      <% end %>
+    </select> 
+    <p class="paragrafgh" style="color: indigo;">if your brand name is not there please add your brand in brand section*</p>
+
+
+    <label for="inputState">Type</label>
+    <select id="inputState" class="form-control" name="type_id">
+      <% @types.each do |type| %>      
+        <option value="<%= type.id %>"><%= type.name %></option>
+      <% end %>
+    </select>
+    <p class="paragrafgh" style="color: indigo;">if your types name is not there please add your types in types section*</p>
+
+  
+
+  <label for="inputState">Quantity</label>
+  <select id="inputState" class="form-control" name="quantity_id">
+    <% @quantities.each do |quantity| %>      
+      <option value="<%= quantity.id %>"><%= quantity.name %></option>
+    <% end %>
+  </select>
+  <br>
+
+
+
+
+
+
+  <input type="submit" class="btn btn-primary" value="Submit" />
+  
+</form>
+</div>
+    
+  </div>
+</div>
+</div>
+
+
+</body>
+
+
